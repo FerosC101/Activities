@@ -1,0 +1,253 @@
+from IPython.display import display, Markdown
+
+questions = """
+### Data Structures and Algorithms Multiple Choice Questions
+
+1. What is a structure in C/C++?
+    - A. A collection of variables of different types under a single name
+    - B. A collection of variables of the same type under a single name
+    - C. A type of pointer
+    - D. A function that returns multiple values
+
+2. Which operator is used to access the members of a structure?
+    - A. &
+    - B. *
+    - C. .
+    - D. ->
+
+3. What is the correct way to dynamically allocate memory for an integer in C++?
+    - A. int* p = new int;
+    - B. int p = malloc(sizeof(int));
+    - C. int* p = int;
+    - D. int p = new int;
+
+4. In a singly linked list each node contains:
+    - A. Data and two pointers to the next nodes
+    - B. Data and a pointer to the next node
+    - C. Only data
+    - D. A pointer to the previous node
+
+5. What is a dangling pointer?
+    - A. A pointer that is not initialized
+    - B. A pointer that points to a deallocated memory
+    - C. A pointer that points to a NULL value
+    - D. A pointer that points to another pointer
+
+6. What is the main advantage of using dynamic memory allocation?
+    - A. Reduced code complexity
+    - B. Fixed size allocation
+    - C. Efficient memory usage
+    - D. Simplified syntax
+
+7. Which of the following is true about pointers in C/C++?
+    - A. A pointer can only store an integer value.
+    - B. A pointer can store the address of a variable.
+    - C. A pointer cannot be incremented or decremented.
+    - D. Pointers do not need to be dereferenced to access the value.
+
+8. What is the correct way to deallocate memory allocated for an array in C++?
+    - A. delete arr;
+    - B. delete[] arr;
+    - C. free(arr);
+    - D. delete *arr;
+
+9. Which of the following best describes a linked list?
+    - A. A collection of elements stored at contiguous memory locations.
+    - B. A collection of elements where each element points to the next element.
+    - C. A collection of elements where each element points to the previous element.
+    - D. A collection of elements where elements are stored in a heap.
+
+10. What is the purpose of the typedef keyword in C/C++?
+    - A. To create a new data type.
+    - B. To define a constant.
+    - C. To create an alias for an existing data type.
+    - D. To allocate dynamic memory.
+
+11. Which of the following operations can be performed on a linked list?
+    - A. Traversal, Insertion, Deletion
+    - B. Traversal, Sorting, Deletion
+    - C. Traversal, Multiplication, Deletion
+    - D. Traversal, Addition, Deletion
+
+12. What is a memory leak?
+    - A. When memory is allocated but not properly initialized.
+    - B. When memory is allocated but not properly deallocated.
+    - C. When memory is deallocated but not reallocated.
+    - D. When memory is initialized but not used.
+
+13. Which of the following statements about arrays and pointers is correct?
+    - A. Arrays and pointers are completely unrelated.
+    - B. Arrays can be treated as constant pointers.
+    - C. Pointers can be treated as constant arrays.
+    - D. Arrays and pointers cannot be used interchangeably.
+
+14. What is the correct syntax to access the second element of an array using a pointer?
+    - A. *(arr + 2)
+    - B. *(arr + 1)
+    - C. *(ptr + 2)
+    - D. ptr[2]
+
+15. In a doubly linked list each node contains:
+    - A. Data and a pointer to the next node
+    - B. Data and pointers to both the previous and next nodes
+    - C. Data and a pointer to the previous node
+    - D. Only data
+
+16. Which function can be used to determine if a particular element is present in a linked list?
+    - A. Traverse
+    - B. Delete
+    - C. Search
+    - D. Insert
+
+17. What happens when you try to dereference a null pointer?
+    - A. The program will print zero.
+    - B. The program will crash.
+    - C. The program will print null.
+    - D. The program will ignore the operation.
+
+18. Which keyword is used to allocate memory dynamically in C++?
+    - A. malloc
+    - B. alloc
+    - C. new
+    - D. calloc
+
+19. Which of the following is true about the delete operator in C++?
+    - A. It deallocates memory allocated for single variables only.
+    - B. It deallocates memory allocated for arrays only.
+    - C. It deallocates memory allocated with new.
+    - D. It deallocates memory allocated with malloc.
+
+20. What is the primary benefit of using a linked list over an array?
+    - A. Faster access to elements
+    - B. Easier to use
+    - C. Dynamic size and ease of insertion/deletion
+    - D. Fixed size and simplicity
+
+21. Which of the following statements about passing structures to functions is correct?
+    - A. Structures cannot be passed to functions.
+    - B. Structures can only be passed by reference.
+    - C. Structures can only be passed by value.
+    - D. Structures can be passed by value or by reference.
+
+22. What is the correct syntax to define a pointer to an integer in C/C++?
+    - A. int ptr;
+    - B. int* ptr;
+    - C. int ptr*;
+    - D. int &ptr;
+
+23. Which of the following is not a type of linked list?
+    - A. Singly linked list
+    - B. Doubly linked list
+    - C. Circular linked list
+    - D. Sequential linked list
+
+24. What will happen if you try to access an element outside the bounds of an array?
+    - A. The program will crash.
+    - B. The program will return a default value.
+    - C. The program will return the last element of the array.
+    - D. The behavior is undefined.
+
+25. What is the role of the next pointer in a linked list node?
+    - A. It points to the previous node in the list.
+    - B. It points to the next node in the list.
+    - C. It stores the data of the node.
+    - D. It points to the head of the list.
+
+26. What is an algorithm in computer programming terms?
+    - A. A set of instructions written in computer code
+    - B. A set of well-defined instructions to solve a particular problem
+    - C. A function to store data
+    - D. A program to manage memory allocation
+
+27. Which of the following is NOT a characteristic of a good-quality algorithm?
+    - A. Precisely defined input and output
+    - B. Written in computer code
+    - C. Clear and unambiguous steps
+    - D. Usable in any programming language
+
+28. Why is learning DSA important?
+    - A. It is required for understanding low-level programming
+    - B. It gives insight into the efficiency of using various solutions
+    - C. It simplifies the coding process
+    - D. It only applies to certain programming languages
+
+29. Which of the following is a linear data structure?
+    - A. Graphs
+    - B. Trees
+    - C. Arrays
+    - D. Hash Tables
+
+30. Which of the following statements is true about nonlinear data structures?
+    - A. Elements are arranged in a sequence
+    - B. Elements are connected in a hierarchical manner
+    - C. They are always faster than linear data structures
+    - D. They use contiguous memory locations
+
+31. What is an array?
+    - A. An unordered collection of values of different types
+    - B. An ordered collection of values of the same type
+    - C. A data structure that can store only character data
+    - D. A random collection of values of the same type
+
+32. How are elements accessed in an array?
+    - A. Using pointers
+    - B. Via its index
+    - C. By searching the entire array
+    - D. Using a hash function
+
+33. What is a one-dimensional array?
+    - A. An array with multiple rows and columns
+    - B. An array with a single row or column of elements
+    - C. An array with different data types
+    - D. An array that cannot be traversed
+
+34. What does a multi-dimensional array consist of?
+    - A. Multiple one-dimensional arrays
+    - B. Only two-dimensional arrays
+    - C. Only three-dimensional arrays
+    - D. Arrays of different data types
+
+35. What is array traversal?
+    - A. Inserting elements in an array
+    - B. Deleting elements from an array
+    - C. Visiting, accessing, and printing each element of an array exactly once
+    - D. Searching for a specific element in an array
+
+36. What is a function in programming?
+    - A. A block of code designed to perform a particular task
+    - B. A data structure used to store values
+    - C. A type of array
+    - D. An operator used to access array elements
+
+37. Which keyword is used to define a function in C/C++?
+    - A. define
+    - B. func
+    - C. def
+    - D. return
+
+38. What is the purpose of a return statement in a function?
+    - A. To end the function definition
+    - B. To return a value to the calling code
+    - C. To print the output of the function
+    - D. To allocate memory dynamically
+
+39. How can you pass an array to a function in C/C++?
+    - A. By value
+    - B. By reference
+    - C. By pointer
+    - D. All of the above
+
+40. Which of the following best describes a function prototype?
+    - A. The actual body of the function
+    - B. A declaration of a function that specifies the function's name, parameters, and return type
+    - C. A keyword used to define a function
+    - D. An operator used to call a function
+
+41. What happens if a function does not return a value in C/C++?
+    - A. It causes a runtime error
+    - B. The function must have a void return type
+    - C. The function will return a default value
+    - D. The function cannot be called
+"""
+
+display(Markdown(questions))
